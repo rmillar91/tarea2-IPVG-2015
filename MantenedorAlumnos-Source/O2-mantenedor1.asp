@@ -1,6 +1,6 @@
 <%
 Set Conn= Server.CreateObject("ADODB.connection")
-Conn.Open = "dsn=mantencion;uid=invitado;pwd=2015;"
+Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;"
 SQL = "SELECT RUT, NOMBRE, MAIL" & _
 			"FROM mantencion.dbo.alumnos " & _
 			" ORDER BY NOMBRE"
