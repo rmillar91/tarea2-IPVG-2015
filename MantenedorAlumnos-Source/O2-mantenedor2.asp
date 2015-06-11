@@ -7,7 +7,7 @@ Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;"
 	if (RUT<>"") then
 	
 	
-	SQL = "INSERT INTO mantencion.dbo.alumnos " & _
+	SQL = "INSERT INTO mantencion.dbo.alumnos" & _
 				"(RUT, NOMBRE, MAIL) " & _
 				"VALUES " & _
 				"('" & RUT & "', '" & NOMBRES & "', '" & CORREO & "')" 
