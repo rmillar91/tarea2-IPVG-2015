@@ -1,19 +1,19 @@
 <%Set Conn= Server.CreateObject("ADODB.connection")
-Conn.Open = "dsn=mantencion;uid=invitado;pwd=pass;"
+Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;"
 	RUT = REQUEST.QUERYSTRING("RUT") 		
-	NOMBRES = REQUEST.QUERYSTRING("NOMBRES")
+	NOMBRES = REQUEST.QUERYSTRING("NOMBRE")
 	MAIL = REQUEST.QUERYSTRING("MAIL")
 	
 	if (RUT<>"") then
 	
 	
 	SQL = "INSERT INTO mantencion.dbo.alumnos " & _
-				"(RUT, NOMBRES, MAIL) " & _
+				"(RUT, NOMBRE, MAIL) " & _
 				"VALUES " & _
 				"('" & RUT & "', '" & NOMBRES & "', '" & CORREO & "')" 
 			Conn.execute(SQL)
 			RUT = ""
-			NOMBRES = ""
+			NOMBRE = ""
 			MAIL = ""
 	end if
 %>
@@ -41,7 +41,7 @@ function volver()
         <td height="25" colspan="6" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF"><b><font face="Verdana,Arial, Helvetica, sans-serif" size="1">RUT 
                 <input type="text" name="RUT" maxlength="5" size="15" class="texto">
                 <font face="Verdana, Arial, Helvetica, sans-serif">NOMBRES</font> 
-                <input type="text" name="NOMBRES" size="60" maxlength="50" class="texto">
+                <input type="text" name="NOMBRE" size="60" maxlength="50" class="texto">
                 </font></b></td>
             </tr>
             <tr align="center" valign="middle">
