@@ -1,7 +1,7 @@
 <%
 Set Conn= Server.CreateObject("ADODB.connection")
-Conn.Open = "dsn=mantencion;uid=invitado;pwd=pass;"
-SQL = "SELECT RUT, NOMBRE, MAIL " & _
+Conn.Open = "dsn=mantencion;uid=invitado;pwd=2015;"
+SQL = "SELECT RUT, NOMBRE, MAIL" & _
 			"FROM mantencion.dbo.alumnos " & _
 			" ORDER BY NOMBRE"
 		Set REG1 = Conn.execute(SQL)
